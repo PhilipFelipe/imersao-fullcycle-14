@@ -1,0 +1,30 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes/64e4ca6e429ee81ce1cf91d5
+
+###
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "route test 1",
+    "source_id": "ElRSLiBHcmFjaWxpYW5vIFJhbW9zLCAxNzQgLSBWaWxhIEdhbGRpbm8sIFBhcmFndWHDp3UgUGF1bGlzdGEgLSBTUCwgMTk3MDAtMDAwLCBCcmFzaWwiMRIvChQKEgkF8vGbrwSVlBHeeG_rOeY4oRCuASoUChIJMehonK8ElZQRvM7Y0-4epkU",
+    "destination_id": "ChIJJbyp2q75iJIRdVwrkSOCI5Y"
+}
+
+
+### Coisas do mapa
+
+### Pegar o place_id
+GET http://localhost:3000/places?text=rua graciliano ramos, paraguaçu paulista, 174
+
+###
+GET http://localhost:3000/places?text=tv agripina de matos, santarém pará, 3563
+
+
+### Pegar direções entre 2 pontos
+GET http://localhost:3000/directions?originId=ElRSLiBHcmFjaWxpYW5vIFJhbW9zLCAxNzQgLSBWaWxhIEdhbGRpbm8sIFBhcmFndWHDp3UgUGF1bGlzdGEgLSBTUCwgMTk3MDAtMDAwLCBCcmFzaWwiMRIvChQKEgkF8vGbrwSVlBHeeG_rOeY4oRCuASoUChIJMehonK8ElZQRvM7Y0-4epkU&destinationId=ChIJJbyp2q75iJIRdVwrkSOCI5Y
